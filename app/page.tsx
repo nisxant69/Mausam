@@ -322,8 +322,8 @@ function PageContent() {
               {/* BLOCK 1: Logo & Mobile Actions */}
               <div className="flex w-full md:w-auto items-center justify-between">
                 <h1
-                  className="text-2xl font-bold tracking-tight bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent cursor-pointer"
-                  onClick={() => window.location.reload()}
+                  className="text-2xl font-bold tracking-tight bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent cursor-pointer hover:opacity-80 transition-opacity"
+                  onClick={() => router.push("/")}
                 >
                   Mausam
                 </h1>
