@@ -2,6 +2,8 @@
 
 A beautiful, modern weather application built for Nepal with real-time weather data, interactive maps, and a stunning user interface.
 
+![Mausam Preview](public/preview.png)
+
 ![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat-square&logo=typescript)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38B2AC?style=flat-square&logo=tailwind-css)
@@ -44,9 +46,26 @@ cp .env.example .env.local
 Add your API keys to `.env.local`:
 
 ```env
-NEXT_PUBLIC_OPENWEATHER_API_KEY=your_openweather_api_key
+# Client-side API keys (used in browser)
+NEXT_PUBLIC_OWM_API_KEY=your_openweather_api_key
 NEXT_PUBLIC_OPENCAGE_API_KEY=your_opencage_api_key
+
+# Server-side API keys (used in API routes)
+OPENWEATHER_API_KEY=your_openweather_api_key
+OPENCAGE_API_KEY=your_opencage_api_key
 ```
+
+### Getting API Keys
+
+1. **OpenWeatherMap API Key**
+   - Sign up at [openweathermap.org](https://openweathermap.org/api)
+   - Go to API Keys section and generate a free key
+   - Free tier includes 1,000 calls/day
+
+2. **OpenCage API Key**
+   - Sign up at [opencagedata.com](https://opencagedata.com/)
+   - Get your API key from the dashboard
+   - Free tier includes 2,500 calls/day
 
 ### Running Locally
 
@@ -76,8 +95,10 @@ npm run start
 
 ## 🌐 APIs Used
 
-- [OpenWeatherMap](https://openweathermap.org/api) — Weather data and forecasts
-- [OpenCage](https://opencagedata.com/) — Geocoding and location search
+| API | Purpose | Free Tier |
+|-----|---------|-----------|
+| [OpenWeatherMap](https://openweathermap.org/api) | Weather data, forecasts, map tiles | 1,000 calls/day |
+| [OpenCage](https://opencagedata.com/) | Geocoding, location search | 2,500 calls/day |
 
 ## 📁 Project Structure
 
@@ -99,6 +120,24 @@ npm run start
 │   └── constants.ts      # App constants
 └── types/
     └── types.ts          # TypeScript definitions
+```
+
+## 🚀 Deployment
+
+### Vercel (Recommended)
+
+1. Push to GitHub
+2. Import project on [Vercel](https://vercel.com)
+3. Add environment variables
+4. Deploy!
+
+### Environment Variables for Production
+
+```
+NEXT_PUBLIC_OWM_API_KEY=xxx
+NEXT_PUBLIC_OPENCAGE_API_KEY=xxx
+OPENWEATHER_API_KEY=xxx
+OPENCAGE_API_KEY=xxx
 ```
 
 ## 📄 License
