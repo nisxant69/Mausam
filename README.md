@@ -2,7 +2,7 @@
 
 A beautiful, modern weather application built for Nepal with real-time weather data, interactive maps, and a stunning user interface.
 
-![Mausam Preview](public/preview.png)
+![Mausam Preview](https://res.cloudinary.com/dhuf7bqvp/image/upload/v1768112331/Screenshot_2026-01-11_at_11.52.08_alnsru.png)
 
 ![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=flat-square&logo=typescript)
